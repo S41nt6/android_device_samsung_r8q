@@ -1,0 +1,11 @@
+service vendor.secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.0-service
+    class hal
+    disabled
+    user system
+    group system
+    
+on property:ro.boot.product.hardware.sku=sn110t
+    start vendor.secure_element_hal_service
+
+on property:ro.boot.nfc.feature.chipname=NXP_SN100U
+    start vendor.secure_element_hal_service
