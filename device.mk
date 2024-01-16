@@ -46,5 +46,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libchrome.vendor
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/init/android.hardware.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service.rc
+
 # Inherit r8qxx blobs
 $(call inherit-product, vendor/samsung/r8qxx/r8qxx-vendor.mk)

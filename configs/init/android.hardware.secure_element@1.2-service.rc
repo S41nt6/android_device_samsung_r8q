@@ -1,0 +1,5 @@
+service vendor.secure_element_hal_service-gto /vendor/bin/hw/android.hardware.secure_element@1.2-service
+    class hal
+    disabled
+    user system
+    group system
