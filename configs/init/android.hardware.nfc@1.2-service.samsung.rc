@@ -3,3 +3,9 @@ service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
     class hal
     user nfc
     group nfc
+
+on property:ro.boot.product.hardware.sku=s3fwrn5
+    start nfc_hal_service
+
+on property:ro.boot.nfc.feature.chipname=SLSI
+    start nfc_hal_service

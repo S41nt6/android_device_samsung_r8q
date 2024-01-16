@@ -3,3 +3,9 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc_snxxx@1.2-ser
     class hal
     user nfc
     group nfc
+
+on property:ro.boot.product.hardware.sku=sn110t
+    start vendor.nfc_hal_service
+
+on property:ro.boot.nfc.feature.chipname=NXP_SN100U
+    start vendor.nfc_hal_service

@@ -3,3 +3,9 @@ service vendor.secure_element_hal_service-gto /vendor/bin/hw/android.hardware.se
     disabled
     user system
     group system
+
+on property:ro.boot.product.hardware.sku=s3fwrn5
+    start vendor.secure_element_hal_service-gto
+
+on property:ro.boot.nfc.feature.chipname=SLSI
+    start vendor.secure_element_hal_service-gto
