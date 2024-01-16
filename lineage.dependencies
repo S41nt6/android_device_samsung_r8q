@@ -1,0 +1,6 @@
+[
+    {
+        "repository": "android_device_samsung_r8q-common",
+        "target_path": "device/samsung/r8q-common"
+    }
+]
