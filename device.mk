@@ -21,9 +21,22 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 # call the common setup
 $(call inherit-product, device/samsung/sm8250-common/common.mk)
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
+    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
 # Init files
 PRODUCT_PACKAGES += \
-    init.r8q.rc
+    init.r8q.rc \
+    init.nfc.sh
+
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.r8q
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Inherit r8q blobs
 $(call inherit-product, vendor/samsung/r8q/r8q-vendor.mk)
