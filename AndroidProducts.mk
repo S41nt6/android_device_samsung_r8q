@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_r8q.mk
+    $(LOCAL_DIR)/arrow.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_r8q-userdebug \
-    lineage_r8q-user \
-    lineage_r8q-eng
+    arrow-userdebug \
+    arrow_r8q-user \
+    arrow_r8q-eng
